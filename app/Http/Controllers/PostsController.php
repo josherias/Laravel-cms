@@ -53,7 +53,7 @@ class PostsController extends Controller
 
 
         //upload image to storage
-        $image = $request->image->store('posts');
+        $image = $request->image->store('');
 
         //create the post
         $post = Post::create([

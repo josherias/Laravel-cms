@@ -55,6 +55,7 @@ class PostsController extends Controller
         //upload image to storage
         $image = $request->image->store('');
 
+
         //create the post
         $post = Post::create([
             'title' => $request->title,
@@ -113,7 +114,7 @@ class PostsController extends Controller
         if ($request->hasFile('image')) {
 
             //upload it
-            $image = $request->image->store('posts');
+            $image = $request->image->store('');
 
             //delete old one using method in model
             $post->deleteImage();
